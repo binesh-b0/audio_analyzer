@@ -7,17 +7,17 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
 
 emotion_dict = {
-  '01':'neutral',
-  '02':'calm',
-  '03':'happy',
-  '04':'sad',
-  '05':'angry',
-  '06':'fearful',
-  '07':'disgust',
-  '08':'surprised'
+  '01': 'neutral',
+  '02': 'calm',
+  '03': 'happy',
+  '04': 'sad',
+  '05': 'angry',
+  '06': 'fearful',
+  '07': 'disgust',
+  '08': 'surprised'
 }
 
-emotion_observed = [ 'happy', 'fearful','angry','sad']
+emotion_observed = ['happy', 'fearful', 'angry', 'sad']
 
 
 def feature_extract(file_name, mfcc, chroma, mel):
