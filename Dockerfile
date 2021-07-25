@@ -26,8 +26,6 @@ RUN pip3 install -r requirements.txt
 
 COPY . /audio_analyzer
 
-EXPOSE 5000
-EXPOSE 80
 ENTRYPOINT [ "python3" ]
 
-CMD [ "app.py" , "--host=0.0.0.0" ]
+CMD [ "app.py" ]
