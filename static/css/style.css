@@ -17,14 +17,14 @@ a {
   color: #5469d4;
   text-decoration: unset;
 }
-.login-root {
+.main-root {
     background: #fff;
     display: flex;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
 }
-.loginbackground {
+.mainbackground {
     min-height: 692px;
     position: fixed;
     bottom: 0;
@@ -51,7 +51,7 @@ a {
     -ms-flex-direction: column;
     flex-direction: column;
 }
-.loginbackground-gridContainer {
+.mainbackground-gridContainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: [start] 1fr [left-gutter] (86.6px)[16] [left-gutter] 1fr [end];
