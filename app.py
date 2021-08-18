@@ -20,6 +20,7 @@ def check_filetypes(filename):
 #  the route() tells Flask what URL should trigger the corresponding  function.
 @app.route("/")
 def main():
+    # render index.html as the default page
     return render_template("index.html")
 
 
@@ -29,8 +30,10 @@ def predict():
     file = request.files["file"]
     user_name = request.form.get("name")
     filename = secure_filename(file.filename)
+    # check if the files are audio flies
     if not check_filetypes(file.filename):
         return render_template("index.html",error = "Not an audio file")
+    # save audio files
     file.save(os.path.join(app.config["AUDIO_UPLOADS"], filename))
     try:
         features = feature_extract(os.path.join(app.config["AUDIO_UPLOADS"], filename), mfcc=True, chroma=True, mel=True)
