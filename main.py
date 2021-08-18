@@ -76,6 +76,7 @@ if __name__ == "__main__":
     model = MLPClassifier(alpha=0.01, batch_size=100, epsilon=1e-08, hidden_layer_sizes=(300,), learning_rate='adaptive', max_iter=800,verbose=True)
     model.fit(x_train, y_train)
 
+    # the trained model is saved as a pickle string.
     pickle.dump(model, open('model.pkl', 'wb'))
 
     y_pred = model.predict(x_test)
