@@ -1,3 +1,5 @@
+# Importing required libraries
+# Librosa is a python package for music and audio analysis.
 import librosa
 import soundfile
 import os, glob, pickle
@@ -17,14 +19,19 @@ emotion_dict = {
   '08': 'surprised'
 }
 
+# The emotions we are detecting
 emotion_observed = ['happy', 'fearful', 'angry', 'sad']
 
-
+# Function to extract features from the audio file
+# chroma, mel and mfcc are extracted from the sound file
 def feature_extract(file_name, mfcc, chroma, mel):
     with soundfile.SoundFile(file_name) as sound:
         sound_data = sound.read(dtype="float32")
         sample_rate = sound.samplerate
         result = np.array([])
+        # mfcc: Mel Frequency Cepstral Coefficient, represents the short-term power spectrum of a sound
+        # chroma: Pertains to the 12 different pitch classes
+        # mel: Mel Spectrogram Frequency
         if chroma:
             short_fourier_transform = np.abs(librosa.stft(sound_data))
         if mfcc:
@@ -47,7 +54,7 @@ def data_load(test_size=0.2):
     i=0
     j=0
     for file in glob.glob("G:\\PClass\\dataset\\Ravdess\\audio_speech_actors_01-24\\Actor_*\\*.wav"):
-
+        # Reading each audio file and extracting its features
         file_name = os.path.basename(file)
         global emotion_dict
         global emotion_observed
@@ -64,7 +71,8 @@ def data_load(test_size=0.2):
 
         x.append(feature_values)
         y.append(emotion_value)
-    print('error',j)
+    print('error', j)
+    # returning the training and the testing data
     return train_test_split(np.array(x), y, test_size=test_size, random_state=9)
 
 
@@ -72,7 +80,7 @@ if __name__ == "__main__":
     x_train, x_test, y_train, y_test = data_load(test_size=0.25)
     print((x_train.shape[0], x_test.shape[0]))
     print(f'Features extracted: {x_train.shape[1]}')
-
+    # Defining the MLP Classifier model and fitting the data
     model = MLPClassifier(alpha=0.01, batch_size=100, epsilon=1e-08, hidden_layer_sizes=(300,), learning_rate='adaptive', max_iter=800,verbose=True)
     model.fit(x_train, y_train)
 
@@ -80,6 +88,8 @@ if __name__ == "__main__":
     pickle.dump(model, open('model.pkl', 'wb'))
 
     y_pred = model.predict(x_test)
+
+    # calculating the accuracy of the model
     accuracy = accuracy_score(y_true=y_test, y_pred=y_pred)
     print("Accuracy: {:.2f}%".format(accuracy*100))
 
