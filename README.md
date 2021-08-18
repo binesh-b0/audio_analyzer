@@ -14,7 +14,9 @@ Latest version of Python is required to run the application
 * Download the code 
   
       git clone https://github.com/binesh-b0/audio_analyzer.git
+* Go to the project directory
 
+      cd audio_analyzer
 ## Getting started
 
 First install the required libraries
