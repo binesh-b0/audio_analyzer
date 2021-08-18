@@ -10,6 +10,9 @@ The result of this project will be that when an audio file of a person speaking 
 # Prerequisites
 Latest version of Python is required to run the application
 * Python Version 3.x
+* Git  
+* Clone App 
+    git clone https://github.com/binesh-b0/audio_analyzer.git
 
 ## Running the code
 
