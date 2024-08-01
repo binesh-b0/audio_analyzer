@@ -2,13 +2,16 @@
 
 This project is made possible thanks to the hard work and dedication of the following contributors:
 
-## Core Contributors
+### Core Contributors
 
-1. **Binesh** 
-2. **Amal**
+1. **binesh-b0** 
+2. **amal-cs**
+3. **gokul3k**
+4. Tony
+5. Varun
 
 
-## How to Contribute
+### How to Contribute
 
 We welcome contributions from the community! Here's how you can get involved:
 
@@ -20,11 +23,11 @@ We welcome contributions from the community! Here's how you can get involved:
 6. **Push to your branch**: Push your changes to your forked repository using `git push origin <branch-name>`.
 7. **Create a pull request**: Open a pull request from your forked repository's branch to the main repository's `main` branch. Be sure to provide a detailed description of your changes.
 
-## Future Contributors
+### Future Contributors
 
 If you contribute to this project, please add your name below in a new pull request:
 
-- **binesh-b0**
+- **Your Name**
 
 Thank you for your contributions!
 

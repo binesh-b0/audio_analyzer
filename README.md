@@ -28,10 +28,3 @@ Run app.py using
 
     python app.py
 
-## Contributers
-
-* Amal
-* Binesh
-* Gokul
-* Tony
-* Varun
