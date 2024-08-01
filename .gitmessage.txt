@@ -1,0 +1,12 @@
+# <type>(<scope>): <subject>
+# 
+# Describe the motivation for the change and contrast this with previous behavior:
+# 
+# - What was the previous behavior?
+# - What is the new behavior?
+# - Why is this change necessary?
+# 
+# References (e.g., issue numbers):
+# 
+# BREAKING CHANGE:
+# 
