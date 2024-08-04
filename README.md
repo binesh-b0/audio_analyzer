@@ -1,6 +1,5 @@
 # audio_analyzer
 
-<a href='https://audio-analyzer-web.herokuapp.com' >View demo</a>
 
 ## Introduction
 
